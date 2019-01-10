@@ -5,10 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "launch lua",
+      "type": "lua",
+      "request": "launch",
+      "stopOnEntry": true,
+      "runtimeExecutable": "${workspaceFolder}/lua.exe",
+      "runtimeArgs": "${workspaceFolder}/hello.lua",
+      "consoleCoding": "utf8"
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "启动程序",
-      "program": "${workspaceFolder}/iconv.js"
+      "program": "${workspaceFolder}/koa.js"
     }
   ]
 }

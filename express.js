@@ -3,6 +3,8 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const fs = require('fs')
 
+console.log(process.env)
+
 const app = express()
 
 app.use(bodyParser())
@@ -19,6 +21,10 @@ app.get('/jsonp', (req, res) => {
   const data = "hello world"
   res.send(`${callback}("${data}")`)
 })
+app.get('/greetings', (req, res) => {
+  const data = "hello world"
+  res.send(data)
+})
 
 app.get('/', async (req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
@@ -27,6 +33,6 @@ app.get('/', async (req, res) => {
   res.end()
 })
 
-app.listen(3000, () => {
-  console.log('app run on port 3000')
+app.listen(8001, () => {
+  console.log('app run on port 8001')
 })
