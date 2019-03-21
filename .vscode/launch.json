@@ -17,7 +17,7 @@
       "type": "node",
       "request": "launch",
       "name": "启动程序",
-      "program": "${workspaceFolder}/koa.js"
+      "program": "${workspaceFolder}/redux/lesson2.js"
     }
   ]
 }
