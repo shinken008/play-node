@@ -4,7 +4,7 @@
  * 3.只能纯函数触发改变
  */
 
-const intialState = {
+const initialState = {
   title: '书',
   content: '关于什么...书'
 }
@@ -12,7 +12,7 @@ const intialState = {
 const dispatch = (action) => {
   switch (action.type) {
     case 'edit':
-      intialState.title = action.text
+      initialState.title = action.text
       break;
     default:
       break;
@@ -21,7 +21,7 @@ const dispatch = (action) => {
 
 
 const getState = () => {
-  return intialState
+  return initialState
 }
 
 /**
