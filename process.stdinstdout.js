@@ -1,3 +1,4 @@
+// 标准输入
 process.stdin.setEncoding('utf8');
 
 process.stdin.on('readable', () => {
@@ -11,6 +12,7 @@ process.stdin.on('readable', () => {
     return
   }
   if (chunk !== null) {
+    // 标准输出，相当于console.log
     process.stdout.write(`data: ${chunk}`);
   }
 });

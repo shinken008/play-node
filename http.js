@@ -10,6 +10,7 @@ const server = http.createServer((req, res) => {
   req.setEncoding('utf8');
 
   // 如果添加了监听器，则可读流会触发 'data' 事件。
+  // req.addListener
   req.on('data', (chunk) => {
     body += chunk;
   });

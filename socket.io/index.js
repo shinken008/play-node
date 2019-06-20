@@ -19,4 +19,4 @@ function tick() {
 
 setInterval(tick, 1000);
 
-app.listen(3000)
+app.listen(3000, () => console.log('server start in http://localhost:3000'))
