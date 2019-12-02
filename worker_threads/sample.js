@@ -1,4 +1,4 @@
-const { Worker, isMainThread, parentPort } = require('worker_threads');
+const { Worker, isMainThread, parentPort, parentPort } = require('worker_threads');
 if (isMainThread) {
   // This code is executed in the main thread and not in the worker.
 

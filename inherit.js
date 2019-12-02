@@ -30,7 +30,7 @@ class Car {
   showLevel() {
     console.log(this.level)
   }
-  // 静态方法。只能通过构造函数调用，不会继承
+  // 静态方法。只能通过构造函数调用，不会继承到原型方法，但是会集成到子类静态方法
   static sayHello() {
     console.log('hello world')
   }
@@ -69,3 +69,4 @@ baoma.showLevel()
 // Car set level: 2v
 // Car get level
 // 2v
+Baoma.sayHello() // hello world
