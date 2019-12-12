@@ -11,7 +11,8 @@ httpServer.on('upgrade', (req, socket, head) => {
   /** switch ws protocol */
   if (req.headers.upgrade.toLowerCase() === 'websocket') {
     /** Receiving data */
-    socket.on('data', socketOnData.bind(socket));
+    // socket.on('data', socketOnData.bind(socket));
+    socket.on('data', socketOnData);
     const key = req.headers['sec-websocket-key'].trim();
     const digest = createHash('sha1')
         .update(key + GUID)
