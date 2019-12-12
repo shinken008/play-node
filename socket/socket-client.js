@@ -12,3 +12,4 @@ socket.on('connect', function () {
 socket.on('data', function (data) {
   console.log('receive data:', data.toString())
 })
+
